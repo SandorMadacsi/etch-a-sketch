@@ -2,13 +2,31 @@ html, body, *{
     margin:0;
     padding: 0;
     border: 1px solid red;
+    text-align: center;
 }
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .canvas-container{
 display: flex;
 justify-content: center;
-flex-wrap: wrap;
+align-items: center;
+width:960px;
+height:960px;
+}
+
+.unit-row{
+    display:flex;
+    flex-direction: column;
 }
 .unit{
     background-color: grey;
+    width:50px;
+    height:50px
 }
