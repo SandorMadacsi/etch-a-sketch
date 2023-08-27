@@ -17,6 +17,8 @@ html, body, *{
 display: flex;
 justify-content: center;
 align-items: center;
+margin:0;
+padding:0;
 width:960px;
 height:960px;
 }
@@ -24,9 +26,10 @@ height:960px;
 .unit-row{
     display:flex;
     flex-direction: column;
+    border: none;
 }
 .unit{
     background-color: grey;
-    width:50px;
-    height:50px
+    /* width:50px; */
+    border: none;
 }
