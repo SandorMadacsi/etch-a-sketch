@@ -1,7 +1,7 @@
 html, body, *{
     margin:0;
     padding: 0;
-    border: 1px solid red;
+    border: 1px solid black;
     text-align: center;
 }
 
@@ -31,10 +31,10 @@ height:960px;
 }
 .unit{
     box-sizing:border-box;
-    background-color: grey;
+    background-color: white;
     
 }
 
 .filled{
-    background-color: blue;
+    background-color: black;
 }
