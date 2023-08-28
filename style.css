@@ -8,6 +8,7 @@ html, body, *{
 .container{
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -29,7 +30,11 @@ height:960px;
     border: none;
 }
 .unit{
+    box-sizing:border-box;
     background-color: grey;
-    /* width:50px; */
-    border: none;
+    
+}
+
+.filled{
+    background-color: blue;
 }
