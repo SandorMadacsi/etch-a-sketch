@@ -38,3 +38,8 @@ height:960px;
 .filled{
     background-color: black;
 }
+
+button{
+    padding:20px 40px;
+    margin: 20px;
+}

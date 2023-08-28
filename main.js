@@ -1,31 +1,33 @@
 
 
 
+
 let canvas = document.querySelector('.canvas-container');
 let mainContainer = document.querySelector('.container');
-
-
-let input=document.querySelector("#input");
-console.log(input.value);
-
-
-
+let input = document.querySelector("#input");
+let clearButton = document.querySelector('button');
 let gridSize = input.value;
+
+
+drawGridSize(gridSize);
 drawCanvas(gridSize);
 
 
+
+clearButton.addEventListener('click', function(){
+    drawCanvas(gridSize);
+});
+
 input.addEventListener("input",function(){
-  
     gridSize = this.value;
-    sizeText.innerText = `GridSize: ${gridSize}`;
-    canvas.innerHTML="";
+    drawGridSize(gridSize);
     drawCanvas(gridSize);
 },0);
 
-let sizeText = document.querySelector('h2');
 
 
 function drawCanvas(gridSize){
+    canvas.innerHTML="";
     for(let i = 0; i < gridSize; i++){
         let row = document.createElement('div');
         row.classList.add('unit-row');
@@ -42,10 +44,14 @@ function drawCanvas(gridSize){
     }
 
     let units = document.querySelectorAll('.unit');
-units.forEach(unit =>  unit.addEventListener('mouseover', fillIn));
+    units.forEach(unit =>  unit.addEventListener('mouseover', fillIn));
 }
 
-
+function drawGridSize(gridSize)
+{
+    let sizeText = document.querySelector('h2');
+    sizeText.innerText = `GridSize: ${gridSize}`;
+}
 
 //Shading square in
 function fillIn(e)
