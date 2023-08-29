@@ -6,6 +6,7 @@ let canvas = document.querySelector('.canvas-container');
 let mainContainer = document.querySelector('.container');
 let input = document.querySelector("#input");
 let clearButton = document.querySelector('button');
+let colorfulSwitch = document.querySelector('#rainbow');
 let gridSize = input.value;
 
 
@@ -56,6 +57,17 @@ function drawGridSize(gridSize)
 //Shading square in
 function fillIn(e)
 {
+    if(colorfulSwitch.checked)
+    {
+      this.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)},
+                                        ${Math.floor(Math.random() * 255)},
+                                        ${Math.floor(Math.random() * 255)})`;
+    }
     this.classList.add('filled');
+}
+
+
+function drawColorful(e){
+    this.checked = !this.checked;
 }
 

@@ -3,6 +3,7 @@ html, body, *{
     padding: 0;
     border: 1px solid black;
     text-align: center;
+    background-color: grey;
 }
 
 .container{
@@ -42,4 +43,16 @@ height:960px;
 button{
     padding:20px 40px;
     margin: 20px;
+}
+
+input,
+label,
+button{
+    font-size: 28px;
+    margin:50px;
+}
+
+.checkbox{
+    width: 30px;
+    height:30px;
 }
