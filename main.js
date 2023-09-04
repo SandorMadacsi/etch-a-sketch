@@ -50,8 +50,8 @@ function drawCanvas(gridSize){
 
 function drawGridSize(gridSize)
 {
-    let sizeText = document.querySelector('h2');
-    sizeText.innerText = `GridSize: ${gridSize}`;
+    let sizeText = document.querySelector('.current-size');
+    sizeText.innerText = `Grid Size: ${gridSize} x ${gridSize}`;
 }
 
 //Shading square in

@@ -1,17 +1,20 @@
 html, body, *{
     margin:0;
     padding: 0;
-    border: 1px solid black;
     text-align: center;
-    background-color: grey;
+    font-family: 'Bebas Neue', sans-serif;
 }
-
+h1{
+    font-size: 70px;;
+}
 .container{
-    height: 100vh;
+    width:960px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin:100px auto;
+    border: 5px solid black
+    
 }
 
 
@@ -23,6 +26,33 @@ margin:0;
 padding:0;
 width:960px;
 height:960px;
+border:5px solid black;
+
+}
+
+
+.ui{
+    display: flex;
+    justify-content: space-evenly;
+    width: 960px;
+    background-color: rgb(54,69,79);
+    color: rgb(219,226,233);
+    border:5px solid black;
+}
+
+.rainbow-check{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rainbow-check > input{
+    margin:20px;
+}
+
+.rainbow-check > label{
+    margin:20px;
 }
 
 .unit-row{
@@ -33,7 +63,48 @@ height:960px;
 .unit{
     box-sizing:border-box;
     background-color: white;
+    border:1px solid black;
     
+}.grid-slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-slider label{
+    margin: 20px;
+}
+
+.grid-slider input{
+    margin:20px;
+}
+
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: salmon;
+    cursor: pointer;
+    width: 15rem;
+    
+    border: 10px solid black;
+  }
+
+
+
+  input[type="range"]:active {
+  background-color: rgb(255, 77, 77);
+  }
+  
+  /******** Firefox ********/
+  input[type="range"]::-moz-range-thumb {
+    border: none; 
+    border-radius: 0; 
+    background-color: rgb(219,226,233);
+    height: 2rem;
+    width: 1rem;
+    border: 5px solid black;
 }
 
 .filled{
@@ -55,4 +126,40 @@ button{
 .checkbox{
     width: 30px;
     height:30px;
+    
 }
+
+
+button{
+    background-color: salmon;
+    border: 10px solid black;
+}
+
+button:hover {background-color:  rgb(185,185,185);
+}
+button:active {
+  background-color: rgb(255, 77, 77);
+  box-shadow: 0 5px rgb(219,226,233);
+  transform: translateY(4px);
+}
+
+
+footer {
+    font-size: 39px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+
+  footer a img{
+    width:40px;
+    transition: transform .7s ease-in-out;
+  }
+
+  img:hover{
+    transform: rotate(360deg);
+  }
